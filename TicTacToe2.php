@@ -13,6 +13,15 @@ class TicTacToe2
   private $grid = array();
   private $movesCount = 0;
 
+
+  public function __construct($gridSize, $player1, $player2, $computer, $emptyChar) {
+    $this->gridSize = $gridSize;
+    $this->player1 = $player1;
+    $this->player2 = $player2;
+    $this->computer = $computer;
+    $this->emptyChar = $emptyChar;
+  }
+
   public function init() {
     $players = array($this->player1, $this->player2, $this->computer);
     shuffle($players);
